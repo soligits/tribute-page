@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+body {
+  text-align: center;
+  width: auto;
+  height: auto;
+  background: rgb(220, 220, 210);
+  border-radius: 10px;
+  font-family: monospace;
+}
+
+#title {
+  font-size: 3em;
+  font-weight: 900;
+  margin: 20px auto;
+  color: brown;
+}
+
+#title-caption {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin: 10px auto;
+  color: orange;
+}
+
+#img-div {
+  margin: auto 20px;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#image {
+  width: 450px;
+  height: 612px;
+  margin: auto 10px;
+}
+
+#caption {
+  margin: 10px auto;
+}
+
+@media (max-width: 600px) {
+
+
+  #img-div {
+      width: 90%;
+      height: auto;
+      margin: auto auto;
+  }
+
+  #image {
+    width: min(90%, 450px);
+    height: auto;
+    margin: auto auto;
+  }
+}
+
+#tribute-title {
+  color: orange;
+}
+
+#tribute-info {
+  width: 550px;
+  height: auto;
+  margin: 10px auto;
+  text-align: justify;
+}
+
+@media (max-width: 700px) {
+
+  body {
+      padding: 20px;
+  }
+
+  #tribute-info {
+    width: min(550px, 90%);
+  }
+
+}
+
+#quote {
+  font-style: italic;
+  font-size: 1.1em;
+  font-family: 'Cookie', monospace;
+}
+
+#read-more {
+  margin: 20px auto;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: gray;
+}
+
+a {
+  color: blue;
+}
+a:hover {
+  animation-duration: 0.5s;
+  animation-name: link-hover;
+  animation-fill-mode: forwards;
+}
+
+@keyframes link-hover {
+    0% {
+      color: blue;
+    }
+    100% {
+      color: skyblue;
+    }
+}
