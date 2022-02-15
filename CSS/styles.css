@@ -30,13 +30,16 @@ body {
   text-align: center;
 }
 
-#image {
+img {
+  display: block;
+  max-width: 450px;
+  max-height: 612px;
   width: 450px;
-  height: 612px;
-  margin: auto 10px;
+  height: auto;
+  margin: auto auto;
 }
 
-#caption {
+#img-caption {
   margin: 10px auto;
 }
 
@@ -49,8 +52,8 @@ body {
       margin: auto auto;
   }
 
-  #image {
-    width: min(90%, 450px);
+  img {
+    width: 90%;
     height: auto;
     margin: auto auto;
   }
