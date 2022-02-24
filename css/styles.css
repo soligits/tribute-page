@@ -4,17 +4,18 @@
 :root {
   --color-yellow-cream: #fffbc2;
   --color-light-skyblue: hsl(197, 63%, 79%);
+  --color-skyblue: hsl(197, 96%, 70%);
+  --color-dark-skyblue: rgb(44, 84, 100);
   --color-dark-violet: rgb(71, 30, 71);
-  --color-violet: rgb(187, 25, 187);
+  --color-raspberry: rgb(194, 11, 96);
 }
 
 body {
-  text-align: center;
   border-radius: 10px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
 }
 
 body::before {
@@ -29,6 +30,7 @@ body::before {
 }
 
 .header-bio {
+  text-align: center;
   margin: 1.2em auto;
   padding: 2em;
 }
@@ -41,74 +43,121 @@ body::before {
   color: var(--color-dark-violet);
 }
 
+.container-bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-bio::before {
+  margin-top: 10em;
+}
+
 .title-caption-bio {
   font-size: 2em;
   line-height: 1em;
   font-weight: 500;
-  margin: auto;
-  color: var(--color-violet);
+  text-align: center;
+  margin: 1em auto auto auto;
+  color: var(--color-raspberry);
 }
 
-#img-div {
-  margin: auto 20px;
-  background-color: white;
+.summary-bio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: var(--color-skyblue);
+  border-radius: 3px;
+  border-width: 0.2em;
+  border-style: outset;
+  border-color: var(--color-dark-skyblue);
+  margin: auto;
   padding: 20px;
   text-align: center;
 }
 
-img {
-  display: block;
-  max-width: 450px;
-  max-height: 612px;
-  width: 450px;
-  height: auto;
-  margin: auto auto;
+.figure-bio {
+  width: 400px;
 }
 
-#img-caption {
+.image-bio {
+  border-radius: 3px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.image-caption-bio {
   margin: 10px auto;
 }
 
-@media (max-width: 600px) {
+.summary-list {
+  width: 300px;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
 
+.achievements-bio {
+  padding-left: 1em;
+  list-style: none;
+}
 
-  #img-div {
-      width: 90%;
-      height: auto;
-      margin: auto auto;
+.achievements-bio li::before {
+  content: '- ';
+}
+
+@media (max-width: 1023px) {
+  .container-bio {
+    padding: 1em;
+    margin: auto;
   }
 
-  img {
-    width: 90%;
-    height: auto;
-    margin: auto auto;
+  .summary-bio {
+    flex-direction: column;
+    max-width: 100%;
+    margin: auto;
+    padding: 0.4em;
+  }
+
+  .figure-bio {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .image-bio {
+    max-width: 100%;
+    margin: auto;
   }
 }
 
-#tribute-title {
-  color: orange;
-}
-
-#tribute-info {
+.list-bio {
+  max-width: 100%;
   width: 550px;
   height: auto;
   margin: 10px auto;
   text-align: justify;
 }
 
-@media (max-width: 700px) {
-
-  body {
-      padding: 20px;
+@media (max-width:767px) {
+  .image-bio {
+    max-width: 80%;
   }
 
-  #tribute-info {
-    width: min(550px, 90%);
+  .figure-bio {
+    max-width: 80%;
   }
 
+  .list-bio {
+    max-width: 80%;
+    padding-right: 2em;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
 }
 
-#quote {
+.quote-bio {
   font-style: italic;
   font-size: 1.1em;
   font-family: 'Cookie', monospace;
